@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guanyu Hou</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0 auto; /* 居中对齐 */
+                padding: 1.25rem; /* 留出1.25rem的间隙 */
+                max-width: 50rem; /* 最大宽度为50rem */
+                background-color: #f4f4f4;
+            }
+        
+            h1, h3 {
+                color: #333;
+            }
+        
+            #profile {
+                width: 12.5rem;
+                height: 12.5rem;
+            }
+        
+            .horizen {
+                display: flex;
+                justify-content: space-between;
+                align-items: center; /* 居中排列 */
+                list-style-type: none;
+                padding: 0;
+            }
+        
+            .horizen li {
+                margin: 0 0.625rem; /* 设置左右间距为0.625rem */
+            }
+
+            #papers .vertical li {
+                display: flex;
+                align-items: center;
+            }
+
+            #papers img {
+                width: 12.25rem;
+                height: auto; /* 按原比例缩放 */
+                cursor: pointer; /* 鼠标悬停时变为手形 */
+                transition: transform 0.3s ease; /* 添加过渡效果 */
+            }
+
+            #papers img:hover {
+                transform: scale(3); /* 鼠标悬停时放大 */
+            }
+        
+            .vertical {
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                padding: 0;
+            }
+        
+        
+            footer {
+                text-align: center;
+                padding: 1.25rem;
+                background-color: #333;
+                color: #fff;
+            }
+        
+            /* 媒体查询，当屏幕宽度小于37.5rem时，应用以下样式 */
+            @media (max-width: 37.5rem) {
+                body {
+                    padding: 0.625rem; /* 在小屏幕上留出0.625rem的间隙 */
+                }
+        
+                #profile {
+                    width: 6.25rem;
+                    height: 6.25rem;
+                }
+        
+                #papers img {
+                    width: 1.5625rem;
+                    height: 1.5625rem;
+                }
+            }
+        </style>
+        
+        
+    </head>
+    <body>
+        <img src="img\profile.png" alt="profile" id="profile">
+        <h1>Guanyu Hou</h1>
+        <ul class="horizen">
+            <li id="email">edgarhou@gmail.com <button>Copy</button></li> 
+            <li id="phone">(+86) 19934322578</li>
+            <li id="location">Chengdu, Sichuan, China</li>
+            <li><a href="sample">CV</a></li>
+            <li><a href="sample">GitHub</a></li>
+        </ul>
+        <p id="bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore nostrum reprehenderit commodi, porro a minima. Reiciendis ad aspernatur tenetur itaque. Eligendi nemo atque quis tempora molestiae provident magni nisi nesciunt!</p>
+        <hr>
+        <h3>Research</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eaque eius exercitationem excepturi, vero sed consequuntur? Porro deleniti, doloribus eveniet recusandae molestias exercitationem. Non accusamus illum ut alias. Aperiam, temporibus?</p>
+        <ul id="papers" class="vertical">
+            <li>
+                <img src="img\electronics-13-02858-g001.webp">
+                <b onclick="window.location.href='https://www.mdpi.com/2079-9292/13/14/2858'">Data Stealing Attacks against Large Language Models via Backdooring</b>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus dolorem ut molestiae voluptatum obcaecati perferendis itaque voluptas ullam nostrum ex quo magnam, enim aliquam tempore alias quisquam veritatis repellendus.</div>
+            </li>
+            <li>
+                <img src="img\icsp.jpg">
+                <b>Embedding Based Sensitive Element Injection against Text-to-Image Generative Models</b>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus dolorem ut molestiae voluptatum obcaecati perferendis itaque voluptas ullam nostrum ex quo magnam, enim aliquam tempore alias quisquam veritatis repellendus.</div>
+            </li>
+            <li>
+                <img src="sample">
+                <b>Title</b>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus dolorem ut molestiae voluptatum obcaecati perferendis itaque voluptas ullam nostrum ex quo magnam, enim aliquam tempore alias quisquam veritatis repellendus.</div>
+            </li>
+        </ul>
+        <footer>
+            <small>Guanyu Hou</small>
+        </footer>
+    </body>
+</html>
