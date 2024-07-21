@@ -32,16 +32,17 @@
                 margin: 0 0.625rem; /* 设置左右间距为0.625rem */
             }
 
-            #papers .vertical li {
+            #papers li {
                 display: flex;
                 align-items: center;
+                margin: 0.625rem 0;
             }
 
             #papers img {
                 width: 12.25rem;
                 height: auto; /* 按原比例缩放 */
                 cursor: pointer; /* 鼠标悬停时变为手形 */
-                transition: transform 0.3s ease; /* 添加过渡效果 */
+                transition: transform 0.4s ease; /* 添加过渡效果 */
             }
 
             #papers img:hover {
@@ -55,12 +56,15 @@
                 padding: 0;
             }
         
-        
             footer {
                 text-align: center;
                 padding: 1.25rem;
                 background-color: #333;
                 color: #fff;
+            }
+
+            .authors{
+                color: gray;
             }
         
             /* 媒体查询，当屏幕宽度小于37.5rem时，应用以下样式 */
@@ -87,35 +91,50 @@
         <img src="img\profile.png" alt="profile" id="profile">
         <h1>Guanyu Hou</h1>
         <ul class="horizen">
-            <li id="email">edgarhou@gmail.com <button>Copy</button></li> 
-            <li id="phone">(+86) 19934322578</li>
+            <li id="email" class="copiable">edgarhou@gmail.com</li> 
+            <li id="phone" class="copiable">(+86) 19934322578</li>
             <li id="location">Chengdu, Sichuan, China</li>
             <li><a href="sample">CV</a></li>
             <li><a href="sample">GitHub</a></li>
         </ul>
-        <p id="bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore nostrum reprehenderit commodi, porro a minima. Reiciendis ad aspernatur tenetur itaque. Eligendi nemo atque quis tempora molestiae provident magni nisi nesciunt!</p>
+        <p id="bio">Hello, I'm Guanyu Hou, an undergraduate student majoring in Software Engineering at Oxford Brookes College, Chengdu University of Technology and expected to graduate in July 2025. I have been involved in AI-related research since 2024. So far, I have completed three works in the field of AI security. In the future, I hope to be exposed to more research in the field of AI security, including computer vision security, language model security, etc.</p>
         <hr>
         <h3>Research</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eaque eius exercitationem excepturi, vero sed consequuntur? Porro deleniti, doloribus eveniet recusandae molestias exercitationem. Non accusamus illum ut alias. Aperiam, temporibus?</p>
+        <p>I am interested in the field of trustworthy and safe AI. Under the guidance of various scholars, including Prof. <b>Rang Zhou</b>, I have participated in some research on backdoor attacks on large language models, and element injection attacks on Text-to-image models, and have gained some achievements and experience.</p>
         <ul id="papers" class="vertical">
             <li>
+                <br>
                 <img src="img\electronics-13-02858-g001.webp">
-                <b onclick="window.location.href='https://www.mdpi.com/2079-9292/13/14/2858'">Data Stealing Attacks against Large Language Models via Backdooring</b>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus dolorem ut molestiae voluptatum obcaecati perferendis itaque voluptas ullam nostrum ex quo magnam, enim aliquam tempore alias quisquam veritatis repellendus.</div>
+                <div>
+                <b>Data Stealing Attacks against Large Language Models via Backdooring</b>
+                <div class="authors">Jiaming He, <b>Guanyu Hou</b>, Xinyue Jia, Yangyang Chen, Wenqi Liao, Yinhang Zhou, Rang Zhou</div>
+                <div>Large language models (LLMs) have gained immense attention and are being increasingly applied in various domains. However, this technological leap forward poses serious security and privacy concerns. This paper explores a novel approach to data stealing attacks by introducing an adaptive method to extract private training data from pre-trained LLMs via backdooring......</div>
+                <a href="https://www.mdpi.com/2079-9292/13/14/2858">Click to read more</a>
+                </div>
             </li>
             <li>
+                <br>
                 <img src="img\icsp.jpg">
+                <div>
                 <b>Embedding Based Sensitive Element Injection against Text-to-Image Generative Models</b>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus dolorem ut molestiae voluptatum obcaecati perferendis itaque voluptas ullam nostrum ex quo magnam, enim aliquam tempore alias quisquam veritatis repellendus.</div>
+                <div class="authors">Benrui Jiang, Kan Chen, <b>Guanyu Hou</b>, Xiying Chen, Jiaming He</div>
+                <div>Text-to-image technique has exploded the research on artificial intelligence, and also deep learning technique has received widespread attentions. It is becoming increasingly popular among researchers and the public. Unfortunately, we found that text-to-image technique has certain security issues, especially adversarial and backdoor attacks.In our work, we explore a novel attack paradigm for the text-to-image scenarios. By our attack, we will use target embeddings to manipulate the user embeddings to generate malicious images..... </div>
+                <a href="https://arxiv.org/abs/2404.14795">Click to read more</a>
+                </div>
             </li>
             <li>
-                <img src="sample">
-                <b>Title</b>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus dolorem ut molestiae voluptatum obcaecati perferendis itaque voluptas ullam nostrum ex quo magnam, enim aliquam tempore alias quisquam veritatis repellendus.</div>
+                <br>
+                <img src="img\talk_too_much.jpg">
+                <div>
+                <b>Talk Too Much: Poisoning Large Language Models under Token Limit</b>
+                <div class="authors">Jiaming He, Wenbo Jiang, <b>Guanyu Hou</b>, Wenshu Fan, Rui Zhang, Hongwei Li</div>
+                <div>Mainstream poisoning attacks on large language models (LLMs) typically set a fixed trigger in the input instance and specific responses for triggered queries. However, the fixed trigger setting (e.g., unusual words) may be easily detected by human detection, limiting the effectiveness and practicality in real-world scenarios. To enhance the stealthiness of the trigger, we present a poisoning attack against LLMs that is triggered by a generation/output condition-token limitation, which is a commonly adopted strategy by users for reducing costs.....</div>
+                <a href="https://arxiv.org/abs/2404.14795">Click to read more</a>
+                </div>
             </li>
         </ul>
         <footer>
-            <small>Guanyu Hou</small>
+            <small>©Guanyu Hou</small>
         </footer>
     </body>
 </html>
