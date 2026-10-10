@@ -22,7 +22,7 @@ I am interested in PhD opportunities in AI safety and security.
 
 ## Internship Experience
 
-- **Shanghai Artificial Intelligence Laboratory (PJLab)** — Research Intern, Sep 2026–Present. Working with Dr. Lijun Li on AI4Science safety.
+- **Shanghai Artificial Intelligence Laboratory (PJLab)** — Research Intern, Sep 2026–Present. Working with [Dr. Lijun Li](https://adwardlee.github.io/) on AI4Science safety.
 - **ByteDance** — Algorithm Intern (Intelligent Security), Jul–Sep 2026. Worked on multilingual safety classifiers, long-reasoning optimization, and jailbreak defense.
 
 See my [CV]({{ '/cv/' | relative_url }}#internship-experience) for details.

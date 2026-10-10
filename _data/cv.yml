@@ -25,7 +25,7 @@ cv:
         location: Shanghai, China
         start_date: "2026-09"
         date_label: Sep 2026 - Present
-        summary: "Advisor: Dr. Lijun Li"
+        summary: "Advisor: [Dr. Lijun Li](https://adwardlee.github.io/)"
         highlights:
           - Research on AI4Science safety, including vulnerability detection, safety boundaries, and alignment mechanisms for scientific domains.
       - company: ByteDance
