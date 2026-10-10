@@ -341,6 +341,7 @@ filtered_bibtex_keywords:
     pmid,
     poster,
     preview,
+    presentation,
     selected,
     sort_date,
     venue,

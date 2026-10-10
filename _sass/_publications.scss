@@ -5,6 +5,18 @@
 @use "variables" as v;
 
 .publications {
+  .presentation-badge {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #b3261e;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
   margin-top: 2rem;
 
   h1 {
