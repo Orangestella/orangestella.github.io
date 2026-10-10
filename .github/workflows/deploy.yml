@@ -54,6 +54,15 @@ jobs:
           for phrase in ['AAAI 2027', 'NeurIPS 2026', 'AAAI 2026']:
               assert phrase in home and phrase in cv, phrase
           assert '2606.21146' in pubs
+          expected = ['he2026chronolock', 'he2026tear', 'hou2025hallucinated', 'hou2025audio', 'he2025tokens', 'he2025guidance', 'he2025press', 'he2024stealing']
+          positions = [pubs.index('id="'+key+'"') for key in expected]
+          assert positions == sorted(positions), 'Publication chronology'
+          assert 'chronolock.png' in home and 'chronolock.png' in pubs
+          assert Path('_site/assets/img/publication_preview/chronolock.png').is_file()
+          for key, symbol, count in [('hou2025audio', '*', 2), ('he2025press', '*', 3), ('he2024stealing', '†', 2)]:
+              author = pubs.split('id="'+key+'"', 1)[1].split('<div class="author">', 1)[1].split('</div>', 1)[0]
+              assert len(re.findall(r'<sup[^>]*>'+re.escape(symbol)+r'</sup>', author)) == count, key
+          assert 'Equal contribution.' in pubs and 'Corresponding author.' in pubs
           assert 'Write your biography' not in home
           assert not re.search(r'(?:href|src)="/al-folio/', home)
           assert Path('_site/assets/pdf/guanyu_hou_cv.pdf').is_file()

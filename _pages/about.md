@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: "Trustworthy AI · AI Safety & Security"
 profile: false
@@ -20,7 +20,7 @@ I am interested in PhD opportunities in AI safety and security.
 
 [Publications]({{ '/publications/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }}) · [Google Scholar](https://scholar.google.com/citations?user=6rsZHFkAAAAJ) · [Email](mailto:guanyu.hou@student.manchester.ac.uk)
 
-## Academic service
+## Academic Service
 
 - **AAAI 2027** — Program Committee Member
 - **NeurIPS 2026** — Reviewer
