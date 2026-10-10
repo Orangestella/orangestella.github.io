@@ -63,6 +63,12 @@ jobs:
               author = pubs.split('id="'+key+'"', 1)[1].split('<div class="author">', 1)[1].split('</div>', 1)[0]
               assert len(re.findall(r'<sup[^>]*>'+re.escape(symbol)+r'</sup>', author)) == count, key
           assert 'Equal contribution.' in pubs and 'Corresponding author.' in pubs
+          for phrase in ['Shanghai Artificial Intelligence Laboratory', 'ByteDance', 'Internship Experience']:
+              assert phrase in home and phrase in cv, phrase
+          assert 'Jul 2026 - Sep 2026' in cv and 'Sep 2026 - Present' in cv
+          assert 'Oxford Brookes University' in cv and 'edgarhou03@gmail.com' in cv
+          assert Path('_site/assets/pdf/guanyu_hou_cv.pdf').read_bytes() == Path('assets/pdf/guanyu_hou_cv.pdf').read_bytes()
+          assert Path('_site/res/cv_en.pdf').read_bytes() == Path('_site/assets/pdf/guanyu_hou_cv.pdf').read_bytes()
           assert 'Write your biography' not in home
           assert not re.search(r'(?:href|src)="/al-folio/', home)
           assert Path('_site/assets/pdf/guanyu_hou_cv.pdf').is_file()

@@ -6,7 +6,7 @@ nav: true
 nav_order: 3
 cv_pdf: /assets/pdf/guanyu_hou_cv.pdf
 cv_format: rendercv
-description: Education and academic service.
+description: Education, internship experience, and academic service.
 toc:
   sidebar: left
 ---

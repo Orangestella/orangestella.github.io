@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Guanyu Hou",
-    "email": "guanyu.hou@student.manchester.ac.uk",
+    "email": "edgarhou03@gmail.com",
     "url": "https://orangestella.github.io/",
     "summary": "Research in AI safety and security."
   },
@@ -9,7 +9,39 @@
     {
       "institution": "The University of Manchester",
       "area": "Artificial Intelligence",
-      "studyType": "MSc"
+      "studyType": "MSc",
+      "highlights": ["Expected completion: 2026"]
+    },
+    {
+      "institution": "Oxford Brookes University",
+      "area": "Software Engineering",
+      "studyType": "BSc with First Class Honours",
+      "highlights": ["Completed: 2025"]
+    }
+  ],
+  "work": [
+    {
+      "name": "Shanghai Artificial Intelligence Laboratory (PJLab)",
+      "position": "Research Intern",
+      "location": "Shanghai, China",
+      "startDate": "2026-09",
+      "summary": "Advisor: Dr. Lijun Li",
+      "highlights": [
+        "Research on AI4Science safety, including vulnerability detection, safety boundaries, and alignment mechanisms for scientific domains."
+      ]
+    },
+    {
+      "name": "ByteDance",
+      "position": "Algorithm Intern (Intelligent Security)",
+      "location": "Beijing, China",
+      "startDate": "2026-07",
+      "endDate": "2026-09",
+      "summary": "",
+      "highlights": [
+        "Multilingual Safety Classifier: Deployed an LLM firewall classifier using supervised fine-tuning and data augmentation, achieving over 97% precision, recall, and F1 globally.",
+        "Long-Reasoning Optimization: Developed preprocessing and augmentation pipelines for complex reasoning inputs, improving precision and recall by 1% in internal training infrastructure.",
+        "Jailbreak Defense: Used agent-based mining of red-team logs to synthesize targeted hard cases and improve robustness against prompt injection."
+      ]
     }
   ]
 }

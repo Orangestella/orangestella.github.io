@@ -1,7 +1,7 @@
 cv:
   name: Guanyu Hou
   label: MSc in Artificial Intelligence
-  email: guanyu.hou@student.manchester.ac.uk
+  email: edgarhou03@gmail.com
   website: https://orangestella.github.io/
   summary: Research in trustworthy AI, AI safety and security, and multimodal models.
   social_networks:
@@ -12,6 +12,32 @@ cv:
       - institution: The University of Manchester
         area: Artificial Intelligence
         studyType: MSc
+        highlights:
+          - "Expected completion: 2026"
+      - institution: Oxford Brookes University
+        area: Software Engineering
+        studyType: BSc with First Class Honours
+        highlights:
+          - "Completed: 2025"
+    Internship Experience:
+      - company: Shanghai Artificial Intelligence Laboratory (PJLab)
+        position: Research Intern
+        location: Shanghai, China
+        start_date: "2026-09"
+        date_label: Sep 2026 - Present
+        summary: "Advisor: Dr. Lijun Li"
+        highlights:
+          - Research on AI4Science safety, including vulnerability detection, safety boundaries, and alignment mechanisms for scientific domains.
+      - company: ByteDance
+        position: Algorithm Intern (Intelligent Security)
+        location: Beijing, China
+        start_date: "2026-07"
+        end_date: "2026-09"
+        date_label: Jul 2026 - Sep 2026
+        highlights:
+          - "Multilingual Safety Classifier: Deployed an LLM firewall classifier using supervised fine-tuning and data augmentation, achieving over 97% precision, recall, and F1 globally."
+          - "Long-Reasoning Optimization: Developed preprocessing and augmentation pipelines for complex reasoning inputs, improving precision and recall by 1% in internal training infrastructure."
+          - "Jailbreak Defense: Used agent-based mining of red-team logs to synthesize targeted hard cases and improve robustness against prompt injection."
     Academic Service:
       - bullet: "Program Committee Member, AAAI 2027"
       - bullet: "Reviewer, NeurIPS 2026"
