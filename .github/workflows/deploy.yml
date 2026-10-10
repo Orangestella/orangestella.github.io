@@ -1,0 +1,89 @@
+name: Build and deploy homepage
+
+on:
+  push:
+    branches: [main, "codex/**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          python -m pip install --upgrade nbconvert
+          npm ci
+      - name: Check formatting
+        run: npx prettier . --check
+      - name: Build Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
+      - name: Verify generated homepage
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          home = Path('_site/index.html').read_text()
+          pubs = Path('_site/publications/index.html').read_text()
+          cv = Path('_site/cv/index.html').read_text()
+          assert 'ChronoLock' in home and 'ChronoLock' in pubs
+          for phrase in ['AAAI 2027', 'NeurIPS 2026', 'AAAI 2026']:
+              assert phrase in home and phrase in cv, phrase
+          assert '2606.21146' in pubs
+          assert 'Write your biography' not in home
+          assert not re.search(r'(?:href|src)="/al-folio/', home)
+          assert Path('_site/assets/pdf/guanyu_hou_cv.pdf').is_file()
+          assert Path('_site/res/cv_en.pdf').is_file()
+          assert Path('_site/assets/css/main.css').is_file()
+          for page in ['blog','projects','books','teaching']:
+              assert not Path('_site',page,'index.html').exists(), page
+          print('Generated pages, publications, service, assets, and root paths verified.')
+          PY
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-build
+          path: _site
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

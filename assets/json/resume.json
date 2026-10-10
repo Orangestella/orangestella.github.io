@@ -1,0 +1,15 @@
+{
+  "basics": {
+    "name": "Guanyu Hou",
+    "email": "guanyu.hou@student.manchester.ac.uk",
+    "url": "https://orangestella.github.io/",
+    "summary": "Research in AI safety and security."
+  },
+  "education": [
+    {
+      "institution": "The University of Manchester",
+      "area": "Artificial Intelligence",
+      "studyType": "MSc"
+    }
+  ]
+}

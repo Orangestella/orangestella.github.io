@@ -1,0 +1,18 @@
+cv:
+  name: Guanyu Hou
+  label: MSc in Artificial Intelligence
+  email: guanyu.hou@student.manchester.ac.uk
+  website: https://orangestella.github.io/
+  summary: Research in trustworthy AI, AI safety and security, and multimodal models.
+  social_networks:
+    - network: GitHub
+      username: Orangestella
+  sections:
+    Education:
+      - institution: The University of Manchester
+        area: Artificial Intelligence
+        studyType: MSc
+    Academic Service:
+      - bullet: "Program Committee Member, AAAI 2027"
+      - bullet: "Reviewer, NeurIPS 2026"
+      - bullet: "Reviewer, AAAI 2026"
