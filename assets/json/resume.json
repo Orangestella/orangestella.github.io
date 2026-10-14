@@ -1,19 +1,22 @@
 {
   "basics": {
     "name": "Guanyu Hou",
-    "email": "edgarhou03@gmail.com",
+    "email": "guanyuhou@foxmail.com",
     "url": "https://orangestella.github.io/",
     "summary": "Research in AI safety and security."
   },
   "education": [
     {
       "institution": "The University of Manchester",
-      "area": "Artificial Intelligence",
-      "studyType": "MSc",
+      "logo": "/assets/img/institutions/manchester.png",
+      "logo_style": "manchester",
+      "studyType": "MSc Artificial Intelligence",
       "highlights": ["Expected completion: 2026"]
     },
     {
       "institution": "Oxford Brookes University",
+      "logo": "/assets/img/institutions/oxford-brookes.png",
+      "logo_style": "oxford-brookes",
       "area": "Software Engineering",
       "studyType": "BSc with First Class Honours",
       "highlights": ["Completed: 2025"]
@@ -26,9 +29,9 @@
       "location": "Shanghai, China",
       "startDate": "2026-09",
       "summary": "Advisor: [Dr. Lijun Li](https://adwardlee.github.io/)",
-      "highlights": [
-        "Research on AI4Science safety, including vulnerability detection, safety boundaries, and alignment mechanisms for scientific domains."
-      ]
+      "highlights": ["Research on AI4Science safety and safety boundaries in scientific domains."],
+      "logo": "/assets/img/institutions/pjlab.png",
+      "logo_style": "pjlab"
     },
     {
       "name": "ByteDance",
@@ -37,11 +40,9 @@
       "startDate": "2026-07",
       "endDate": "2026-09",
       "summary": "",
-      "highlights": [
-        "Multilingual Safety Classifier: Deployed an LLM firewall classifier using supervised fine-tuning and data augmentation, achieving over 97% precision, recall, and F1 globally.",
-        "Long-Reasoning Optimization: Developed preprocessing and augmentation pipelines for complex reasoning inputs, improving precision and recall by 1% in internal training infrastructure.",
-        "Jailbreak Defense: Used agent-based mining of red-team logs to synthesize targeted hard cases and improve robustness against prompt injection."
-      ]
+      "highlights": ["Worked on multilingual LLM safety classifiers and jailbreak defense."],
+      "logo": "/assets/img/institutions/bytedance.svg",
+      "logo_style": "bytedance"
     }
   ]
 }

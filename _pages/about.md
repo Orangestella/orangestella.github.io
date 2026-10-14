@@ -18,7 +18,7 @@ I study the robustness of audio language models, safety evaluation of text-to-vi
 
 I am interested in PhD opportunities in AI safety and security.
 
-[Publications]({{ '/publications/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }}) · [Google Scholar](https://scholar.google.com/citations?user=6rsZHFkAAAAJ) · [Email](mailto:edgarhou03@gmail.com)
+[Publications]({{ '/publications/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }}) · [Google Scholar](https://scholar.google.com/citations?user=6rsZHFkAAAAJ) · [Email](mailto:guanyuhou@foxmail.com)
 
 ## Internship Experience
 

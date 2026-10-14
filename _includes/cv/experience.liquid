@@ -8,8 +8,13 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
     <li class="list-group-item">
-      <div class="row">
+      <div class="row{% if entry.logo %} cv-entry-with-logo{% endif %}">
         <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+          {% if entry.logo %}
+            <div class="cv-institution-logo cv-institution-logo--{{ entry.logo_style | default: 'default' }}">
+              <img src="{{ entry.logo | relative_url }}" alt="{{ entry.company | default: entry.name | escape }} logo" loading="lazy">
+            </div>
+          {% endif %}
           {% capture start_date %}
             {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
           {% endcapture %}
@@ -56,7 +61,7 @@
             </tbody>
           </table>
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 cv-entry-body">
           {% capture position_title %}
             {% if entry.position %}{{ entry.position }}{% endif %}
           {% endcapture %}
