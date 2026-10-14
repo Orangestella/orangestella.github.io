@@ -11,7 +11,7 @@ div.container-link-button {
   flex-direction: column;
   align-items: center;
   align-self: center;
-  transform: none;
+  transform: translateX(-8px);
 
   > table {
     align-self: flex-start;
@@ -79,6 +79,7 @@ div.container-link-button {
       flex: 0 0 88px;
       max-width: 88px;
       padding: 0 8px;
+      transform: translateX(-4px);
 
       .badge {
         min-width: 0 !important;
