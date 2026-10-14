@@ -11,6 +11,7 @@ div.container-link-button {
   flex-direction: column;
   align-items: center;
   align-self: center;
+  transform: none;
 
   > table {
     align-self: flex-start;
@@ -29,6 +30,8 @@ div.container-link-button {
   padding: 4px;
   border-radius: 4px;
   background: #fff;
+  // Center within the space up to the heading, including its padding and margin.
+  transform: translateX(9.5px);
 
   img {
     display: block;
@@ -61,6 +64,12 @@ div.container-link-button {
 
   &--bytedance {
     background: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .cv-institution-logo {
+    transform: translateX(19.5px);
   }
 }
 
