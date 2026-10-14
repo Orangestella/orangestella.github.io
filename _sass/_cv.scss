@@ -73,6 +73,12 @@ div.container-link-button {
   }
 }
 
+@media (max-width: 767.98px) {
+  .cv-institution-logo {
+    transform: none;
+  }
+}
+
 @media (max-width: 575.98px) {
   .cv-entry-with-logo {
     > .date-column {
